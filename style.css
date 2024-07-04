@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #111111;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container {
+  width: 100%;
+  max-width: 635px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 75px 10px 15px 10px;
+}
+
+.tool {
+  border-radius: 24px;
+  text-align: center;
+  color: black;
+  padding: 0.5em 1.1em;
+  margin-bottom: 1em;
+  position: absolute;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: top 0.1s ease-in-out;
+  z-index: -1;
+}
+
+.tool::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  position: absolute;
+  transform: rotate(45deg) translate(-50%, -50%);
+  top: 99%;
+  left: 44.8%;
+}
+
+.tip-mongo {
+  background-color: #47a248;
+  color: white;
+}
+
+.tip-express {
+  background-color: #ffffff;
+}
+
+.tip-react {
+  background-color: #61dafb;
+}
+
+.tip-node {
+  background-color: #8cc84b;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+.icons:hover .tool {
+  opacity: 1;
+  top: -3.55em;
+  cursor: pointer;
+}
+
+.icons + .icons {
+  margin-left: 20px;
+}
+
+.icons span {
+  font-size: 24px;
+  margin: 28px 0 0 0;
+  cursor: default;
+}
+
+.mongo {
+  color: #47a248;
+}
+
+.express {
+  color: #ffffff;
+}
+
+.react {
+  color: #61dafb;
+}
+
+.node {
+  color: #8cc84b;
+}
